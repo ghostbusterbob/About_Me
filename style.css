@@ -1,4 +1,3 @@
-/* --- Global Reset --- */
 * {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
@@ -8,7 +7,6 @@
 
 body {
     background: #008080;
-    /* Classic Win95 teal background */
     color: #000;
     line-height: 1.6;
     padding: 40px;
@@ -19,7 +17,6 @@ img {
     max-width: 100%;
     height: auto;
     margin: 20px auto;
-    /* centers image inside panel */
     outline: 2px solid grey;
 }
 
@@ -33,10 +30,8 @@ img {
     box-shadow: 4px 4px #404040;
 }
 
-/* --- Title Bar --- */
 .title-bar {
     background: linear-gradient(#008000, #004d00);
-    /* Windows 95 green */
     color: #fff;
     padding: 4px 8px;
     font-weight: bold;
@@ -52,7 +47,6 @@ img {
     padding: 26px;
 }
 
-/* Panels (look like inset boxes) */
 .panel {
     background: #dfdfdf;
     border: 2px solid #fff;
