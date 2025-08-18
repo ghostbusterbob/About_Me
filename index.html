@@ -16,7 +16,7 @@
         </div>
         <div class="window-content">
             <header>
-                <h1>Hi :) I'm Jaysen (ghostbusterbob)</h1>
+                <h1>Hi :) I'm ghostbusterbob</h1>
                 <p>Welcome to my portfolio!</p>
             </header>
 
@@ -42,7 +42,11 @@
                 <section class="panel">
                     <h2>Planned Projects</h2>
                     <ul>
-                        <li>FNAF 1 REMAKE - A remake of the original FNAF using Unity HDRP <b>non profit</b></li>
+                        <li>FNAF 1 Remake – A fan-made, non-profit remake of the original Five Nights at Freddy’s, built
+                            in Unity using
+                            HDRP for enhanced graphics
+                            and atmosphere.
+                        </li>
                     </ul>
 
 
@@ -51,14 +55,45 @@
                 <section class="panel">
                     <h2>Contact</h2>
                     <p>You can reach me at: <a href="mailto:ghostbusterbob3@gmail.com">ghostbusterbob3@gmail.com</a></p>
+                    <img class="pfpImage" width="500" src="images/RenderResult.jpg" alt="">
                 </section>
             </main>
 
             <footer>
+                <h3>Socials: </h3>
+                <div class="Socials">
+                    <a href="https://github.com/ghostbusterbob">
+                        <img width="100" src="images/25231.png" alt="">
+                    </a>
+                    <a href="mailto:ghostbusterbob3@gmail.com">
+                        <img width="100" src="images/gmailpng.parspng.com-7-removebg-preview.png" alt="">
+                    </a>
+                    <img width="100" src="images/discord-logo-png_seeklogo-480527.png" alt="">
+                </div>
+
+
                 <p>© 2025 ghostbusterbob</p>
+                <div class="message-box" id="discordMsg">
+                    <img width="80" src="images/discord-logo-png_seeklogo-480527.png" alt="">
+                    <h2>"ghostbusterbob"</h3>
+                        <button onclick="closeMessage()">OK</button>
+                </div>
+
             </footer>
         </div>
     </div>
 </body>
+<script>
+    const discordImage = document.querySelector('.Socials img:nth-child(3)');
+    const msgBox = document.getElementById('discordMsg');
+
+    discordImage.addEventListener('click', () => {
+        msgBox.style.display = 'block';
+    });
+
+    function closeMessage() {
+        msgBox.style.display = 'none';
+    }
+</script>
 
 </html>

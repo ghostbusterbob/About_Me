@@ -20,7 +20,6 @@ img {
     outline: 2px solid grey;
 }
 
-/* --- Window Styling --- */
 .window {
     background: #c0c0c0;
     border: 2px solid #000;
@@ -54,4 +53,39 @@ img {
     border-left-color: #7f7f7f;
     margin-bottom: 20px;
     padding: 22px;
+}
+
+.Socials {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.Socials img {
+    margin: 0;
+    display: block;
+    cursor: pointer;
+}
+
+.message-box {
+    display: none;
+    background: #c0c0c0;
+    border: 2px solid #000;
+    box-shadow: 4px 4px #404040;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.message-box button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
