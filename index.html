@@ -2,131 +2,106 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me - ghostbusterbob</title>
-    <link rel="icon" type="image/png" href="images/RenderResult.jpg">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About me - ghostbusterbob</title>
+  <link rel="icon" type="image/png" href="images/RenderResult.jpg">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="window">
-        <div class="title-bar">
-            <span>About me</span>
+  <div class="terminal">
+    <div class="scanlines"></div>
+
+    <header class="fade-in">
+      <h1 class="typewriter">> Hi, I’m <span class="highlight">ghostbusterbob</span></h1>
+      <p class="fade-in delay-1">Ehhh I make games I guess.</p>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>> Experience</h2>
+        <p>Mostly Unity stuff | Some .NET (Windows Forms / WPF)</p>
+        <p>C# / HTML / CSS / JS</p>
+      </section>
+
+      <section class="panel">
+        <h2>> Projects</h2>
+        <ul>
+          <li>RE:CLEAN – A co-op multiplayer game (Steam page soon)</li>
+          <img src="images/471746194-c5d1963a-4d83-4a28-9913-ac92ee5f2954.gif" alt="RE:CLEAN preview">
+
+          <li><a href="https://drive.google.com/file/d/1wGEX6iwPtG_mFSR6tQFfle8eO0LJik8O/view?usp=drive_link"
+              target="_blank">
+              Tronics Bot
+            </a> – Discord bot built in C# with DSharpPlus</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>> 3D Models</h2>
+        <p>Here are some of my recent Blender models:</p>
+        <div class="model-gallery">
+          <figure>
+            <img src="images/RenderResult.jpg" alt="Render Result">
+            <figcaption>Enemy from RE:CLEAN</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/Screenshot 2025-11-07 103953.png" alt="Render">
+            <figcaption>Geiger Counter from RE:CLEAN</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/NoteBookRender.png" alt="Render">
+            <figcaption>Notebook from RE:CLEAN</figcaption>
+          </figure>
         </div>
-        <div class="window-content">
-            <header>
-                <h1>Hi! </h1>
-                <p>I'm ghostbusterbob</p>
-            </header>
+      </section>
 
-            <main>
-                <section class="panel">
-                    <h2>Experience?</h2>
-                    <p>Mostly Unity stuff | Some .NET experience (Windows Forms / WPF)</p>
-                    <br>
-                    <p>C#</p>
-                    <p>HTML & CSS</p>
-                    <p>Basic JS</p>
-                </section>
+      <section class="panel">
+        <h2>> Planned Projects</h2>
+        <p>Nothing planned for now! :D</p>
+      </section>
 
-                <section class="panel">
-                    <h2>Projects</h2>
-                    <ul>
-                        <li>RE:CLEAN – A co-op multiplayer game made in the Unity Game Engine (Steam
-                            page coming
-                            soon)
-                            <img src="images/471746194-c5d1963a-4d83-4a28-9913-ac92ee5f2954.gif" alt="">
-                        </li>
-                        <li><a
-                                href="https://drive.google.com/file/d/1wGEX6iwPtG_mFSR6tQFfle8eO0LJik8O/view?usp=drive_link">Tronics
-                                Bot </a>(Closed
-                            Source) - A full-featured Discord bot built in C# using the DSharpPlus library. Optimized
-                            for
-                            managing and running a Discord shop server.</li>
-                    </ul>
-
-
-
-                </section>
-                <section class="panel">
-                    <h2>3D Modeling</h2>
-                    <p>Here are some of my 3D models i've made in the past 5 months</p>
-                  <div style="display: flex; gap: 20px; justify-content: center;">
-                    <figure>
-                        <img class="pfpImage" width="400" src="images/RenderResult.jpg" alt="Render Result">
-                        <figcaption style="text-align: center; font-size: 14px; color: gray;">
-                        Enemy from my game RE:CLEAN
-                        </figcaption>
-                    </figure>
-
-                    <figure>
-                        <img width="400" src="images/Render.png" alt="Render">
-                        <figcaption style="text-align: center; font-size: 14px; color: gray;">
-                        Low Poly AK-47 made using Blender & Substance Painter
-                        </figcaption>
-                    </figure>
-
-                    <figure>
-                        <img width="400" src="images/NoteBookRender.png" alt="Render">
-                        <figcaption style="text-align: center; font-size: 14px; color: gray;">
-                        Notebook made using Blender & Substance Painter, featured in my game RE:CLEAN
-                        </figcaption>
-                    </figure>
-                    </div>
-
-
-                </section>
-
-                <section class="panel">
-                    <h2>Planned Projects</h2>
-                    <ul>
-                        <p>Nothing planned for now! :D</p>
-                    </ul>
-
-
-                </section>
-
-                <section class="panel">
-                    <h2>Contact</h2>
-                <div class="Socials">
-                    <a href="https://github.com/ghostbusterbob">
-                        <img width="100" src="images/25231.png" alt="">
-                    </a>
-                    <a href="mailto:ghostbusterbob3@gmail.com">
-                        <img width="100" src="images/gmailpng.parspng.com-7-removebg-preview.png" alt="">
-                    </a>
-                    <img width="100" src="images/discord-logo-png_seeklogo-480527.png" alt="">
-                </div>
-
-
-               
-                <div class="message-box" id="discordMsg">
-                    <img width="80" src="images/discord-logo-png_seeklogo-480527.png" alt="">
-                    <h2>"ghostbusterbob"</h3>
-                        <button onclick="closeMessage()">OK</button>
-                </div>
-
-                </section>
-            </main>
-
-            <footer>
-                <p>© 2025 ghostbusterbob</p>
-            </footer>
+      <section class="panel">
+        <h2>> Contact</h2>
+        <div class="Socials">
+          <a href="https://github.com/ghostbusterbob" target="_blank">
+            <img src="images/github.png" alt="GitHub">
+          </a>
+          <a href="mailto:ghostbusterbob3@gmail.com">
+            <img src="images/google-mail-gmail-icon-logo-symbol-free-png.webp" alt="Gmail">
+          </a>
+          <A>          <img id="discord-icon" src="images/discord-logo-white-circle-outline-icon-app-transparent-background-premium-social-media-design-for-digital-download-free-png.png" alt="Discord">
+</A>
         </div>
-    </div>
-</body>
-<script>
-    const discordImage = document.querySelector('.Socials img:nth-child(3)');
+         <div class="message-box" id="discordMsg">
+          <p>"ghostbusterbob"</p>
+          <button onclick="closeMessage()">OK</button>
+        </div>
+
+       
+      </section>
+    </main>
+
+    <footer>
+      <p class="blink">© 2025 ghostbusterbob</p>
+    </footer>
+  </div>
+
+  <script>
+    const discordImage = document.getElementById('discord-icon');
     const msgBox = document.getElementById('discordMsg');
 
     discordImage.addEventListener('click', () => {
-        msgBox.style.display = 'block';
+      msgBox.style.display = 'block';
     });
 
     function closeMessage() {
-        msgBox.style.display = 'none';
+      msgBox.style.display = 'none';
     }
-</script>
+  </script>
+</body>
 
 </html>

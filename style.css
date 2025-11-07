@@ -1,91 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 * {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: #008080;
-    color: #000;
-    line-height: 1.6;
-    padding: 40px;
+  background: #000;
+  color: #00ff99;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 16px;
+  overflow-x: hidden;
+  padding: 40px;
+  position: relative;
+}
+
+/* Terminal container */
+.terminal {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #00ff99;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 0 20px #00ff99;
+}
+
+/* Scanline effect */
+.scanlines {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    rgba(0, 255, 0, 0.03) 0px,
+    rgba(0, 0, 0, 0.03) 2px
+  );
+  z-index: 9999;
+  animation: flicker 1.5s infinite;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.8;
+  }
+}
+
+/* Panels */
+.panel {
+  border-left: 3px solid #00ff99;
+  padding: 10px 20px;
+  margin-top: 20px;
+  animation: fadeIn 1s ease forwards;
+}
+
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #00ffcc;
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 20px auto;
-    outline: 2px solid grey;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #00ff99;
+  box-shadow: 0 0 10px #00ff99;
+  margin: 10px auto;
 }
 
-.window {
-    background: #c0c0c0;
-    border: 2px solid #000;
-    width: 90%;
-    max-width: 700px;
-    margin: auto;
-    box-shadow: 4px 4px #404040;
+/* Typing animation */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #00ff99;
+  white-space: nowrap;
+  animation: typing 2s steps(20, end), blink 1s step-end infinite;
 }
 
-.title-bar {
-    background: linear-gradient(#008000, #004d00);
-    color: #fff;
-    padding: 4px 8px;
-    font-weight: bold;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid #000;
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
-/* --- Window Content --- */
-.window-content {
-    padding: 26px;
+@keyframes blink {
+  50% { border-color: transparent; }
 }
 
-.panel {
-    background: #dfdfdf;
-    border: 2px solid #fff;
-    border-top-color: #7f7f7f;
-    border-left-color: #7f7f7f;
-    margin-bottom: 20px;
-    padding: 22px;
+/* Fade in */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
 }
 
-.Socials {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+.delay-1 {
+  animation-delay: 1.5s;
 }
 
-.Socials img {
-    margin: 0;
-    display: block;
-    cursor: pointer;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
+/* Models */
+.model-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+figcaption {
+  font-size: 14px;
+  color: #00ffaa;
+  text-align: center;
+}
+
+/* Message box */
 .message-box {
-    display: none;
-    background: #c0c0c0;
-    border: 2px solid #000;
-    box-shadow: 4px 4px #404040;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
+  display: none;
+  position: fixed;
+  background: #001a00;
+  border: 2px solid #00ff99;
+  padding: 20px;
+  box-shadow: 0 0 20px #00ff99;
+  width: 250px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .message-box button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid #00ff99;
+  color: #00ff99;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+.message-box button:hover {
+  background: #00ff99;
+  color: #000;
+}
+
+/* Socials */
+.Socials {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.Socials img {
+  width: 60px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.Socials img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.blink {
+  animation: blinkText 1s infinite;
+}
+
+@keyframes blinkText {
+  50% { opacity: 0; }
+}
+
+/* Highlight text */
+.highlight {
+  color: #00ffff;
 }
