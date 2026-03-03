@@ -2,106 +2,102 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About me - ghostbusterbob</title>
-  <link rel="icon" type="image/png" href="images/RenderResult.jpg">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Jaysen van der Wal</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="terminal">
-    <div class="scanlines"></div>
 
-    <header class="fade-in">
-      <h1 class="typewriter">> Hi, I’m <span class="highlight">ghostbusterbob</span></h1>
-      <p class="fade-in delay-1">Ehhh I make games I guess.</p>
-    </header>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="accent">Jaysen van der Wal</span></h1>
+      <p>Game Developer · Software Developer · 3D Artist</p>
+    </div>
+  </header>
 
-    <main>
-      <section class="panel">
-        <h2>> Experience</h2>
-        <p>Mostly Unity stuff | Some .NET (Windows Forms / WPF)</p>
-        <p>C# / HTML / CSS / JS</p>
-      </section>
+  <main>
 
-      <section class="panel">
-        <h2>> Projects</h2>
-        <ul>
-          <li>RE:CLEAN – A co-op multiplayer game (Steam page soon)</li>
+    <div class="blud">
+      <img class="logos" src="images/Csharp_Logo.png" alt="C# Logo">
+      <img class="logos" src="images/images-removebg-preview.png" alt="C# Logo">
+
+    </div>
+
+    <section class="card">
+      <h2>About me</h2>
+      <p></p>
+    </section>
+
+    <!-- PROJECTS — UNIFORM CARD FIX APPLIED -->
+    <section class="card">
+      <h2>Projects</h2>
+      <div class="flex-row">
+
+        <div class="card project-card">
           <img src="images/471746194-c5d1963a-4d83-4a28-9913-ac92ee5f2954.gif" alt="RE:CLEAN preview">
-
-          <li><a href="https://drive.google.com/file/d/1wGEX6iwPtG_mFSR6tQFfle8eO0LJik8O/view?usp=drive_link"
-              target="_blank">
-              Tronics Bot
-            </a> – Discord bot built in C# with DSharpPlus</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>> 3D Models</h2>
-        <p>Here are some of my recent Blender models:</p>
-        <div class="model-gallery">
-          <figure>
-            <img src="images/RenderResult.jpg" alt="Render Result">
-            <figcaption>Enemy from RE:CLEAN</figcaption>
-          </figure>
-
-          <figure>
-            <img src="images/Screenshot 2025-11-07 103953.png" alt="Render">
-            <figcaption>Geiger Counter from RE:CLEAN</figcaption>
-          </figure>
-
-          <figure>
-            <img src="images/NoteBookRender.png" alt="Render">
-            <figcaption>Notebook from RE:CLEAN</figcaption>
-          </figure>
+          <p><strong>RE:CLEAN</strong> — Co-op multiplayer game (Steam page soon)</p>
         </div>
-      </section>
 
-      <section class="panel">
-        <h2>> Planned Projects</h2>
-        <p>Nothing planned for now! :D</p>
-      </section>
+        <div class="card project-card">
+          <img src="images/2026-03-03 14-25-53.gif">
+          <p><strong>Prototype of a game</strong> — Random Game</p>
+        </div>
 
-      <section class="panel">
-        <h2>> Contact</h2>
-        <div class="Socials">
-          <a href="https://github.com/ghostbusterbob" target="_blank">
-            <img src="images/github.png" alt="GitHub">
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3D Models</h2>
+      <div class="flex-row">
+        <figure class="card model-figure">
+          <a href="images/Outside.png" class="lightbox">
+            <img src="images/Outside.png" alt="">
           </a>
-          <a href="mailto:ghostbusterbob3@gmail.com">
-            <img src="images/google-mail-gmail-icon-logo-symbol-free-png.webp" alt="Gmail">
+          <figcaption>Outside – RE:CLEAN</figcaption>
+        </figure>
+
+        <figure class="card model-figure">
+          <a href="images/Enemy3.png" class="lightbox">
+            <img src="images/Enemy3.png" alt="">
           </a>
-          <A>          <img id="discord-icon" src="images/discord-logo-white-circle-outline-icon-app-transparent-background-premium-social-media-design-for-digital-download-free-png.png" alt="Discord">
-</A>
-        </div>
-         <div class="message-box" id="discordMsg">
-          <p>"ghostbusterbob"</p>
-          <button onclick="closeMessage()">OK</button>
-        </div>
+          <figcaption>Enemy – RE:CLEAN</figcaption>
+        </figure>
 
-       
-      </section>
-    </main>
+        <figure class="card model-figure">
+          <a href="images/geigercounter.png" class="lightbox">
+            <img src="images/geigercounter.png" alt="">
+          </a>
+          <figcaption>Geiger Counter – RE:CLEAN</figcaption>
+        </figure>
+      </div>
+    </section>
 
-    <footer>
-      <p class="blink">© 2025 ghostbusterbob</p>
-    </footer>
+    <section class="card">
+      <h2>Planned Projects</h2>
+      <p>No active projects at the moment.</p>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 ghostbusterbob — All Rights Reserved</p>
+  </footer>
+
+
+
+  <div id="lightbox-overlay">
+    <img id="lightbox-img" src="" alt="">
+    <span id="lightbox-close">&times;</span>
   </div>
-
-  <script>
-    const discordImage = document.getElementById('discord-icon');
-    const msgBox = document.getElementById('discordMsg');
-
-    discordImage.addEventListener('click', () => {
-      msgBox.style.display = 'block';
-    });
-
-    function closeMessage() {
-      msgBox.style.display = 'none';
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
+
 
 </html>
