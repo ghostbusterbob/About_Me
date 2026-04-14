@@ -369,4 +369,32 @@ h2::before {
   .flex-row {
     justify-content: center;
   }
+}/* ===== CONTACT ===== */
+.contact-container {
+  text-align: center;
+}
+
+.contact-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.contact-item {
+  text-decoration: none;
+  color: #4A90E2;
+  font-weight: 500;
+  padding: 10px 16px;
+  border: 1px solid rgba(74,144,226,0.25);
+  border-radius: 8px;
+  background: #111;
+  transition: 0.25s;
+}
+
+.contact-item:hover {
+  background: #4A90E2;
+  color: #111;
+  transform: translateY(-2px);
 }
