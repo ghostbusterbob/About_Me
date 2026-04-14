@@ -9,46 +9,96 @@
 </head>
 
 <body>
+  <div id="tsparticles"></div>
 
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm <span class="accent">Jaysen van der Wal</span></h1>
-      <p>Game Developer · Software Developer · 3D Artist</p>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="container">
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#models">3D Models</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-
-    <div class="blud">
-      <img class="logos" src="images/Csharp_Logo.png" alt="C# Logo">
-      <img class="logos" src="images/images-removebg-preview.png" alt="C# Logo">
-
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Jaysen van der Wal</h1>
+    <div class="hero-icons">
+  <span class="icon unity">Unity</span>
+  <span class="icon csharp">C#</span>
+  <span class="icon blender">Blender</span>
+</div>
+    
+    <div class="blud logo-slide-in">
     </div>
 
-    <section class="card">
+    <button onclick="scrollToSection('projects')">Go to Projects</button>
+
+    <!-- Divider -->
+    <div class="hero-divider"></div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <section id="about" class="card">
       <h2>About me</h2>
-      <p></p>
+      <p><strong>Hi, i'm Jaysen. I'm 17 years old and I'm a Game Developer and 3D Artist. I've been using C# and Unity for the past 5 years. <br> I'm also currently a student at Media College Amsterdam. <br> My primary programing language is C#, this is also the language used in the Unity Game. In my freetime i like to play video-games, and working on projects.</strong></p>
     </section>
 
-    <!-- PROJECTS — UNIFORM CARD FIX APPLIED -->
-    <section class="card">
+    
+    <section id="projects" class="card">
       <h2>Projects</h2>
-      <div class="flex-row">
 
-        <div class="card project-card">
-          <img src="images/471746194-c5d1963a-4d83-4a28-9913-ac92ee5f2954.gif" alt="RE:CLEAN preview">
-          <p><strong>RE:CLEAN</strong> — Co-op multiplayer game (Steam page soon)</p>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <img src="images/471746194-c5d1963a-4d83-4a28-9913-ac92ee5f2954.gif" alt="">
+
+          <strong>RE:CLEAN</strong>
+
+          <div class="project-icons">
+            <span>Unity</span>
+            <span>Multiplayer</span>
+            <span>3D</span>
+          </div>
+
+          <p>
+            Co-op multiplayer game where players clean hazardous environments while surviving threats.
+          </p>
         </div>
 
-        <div class="card project-card">
-          <img src="images/2026-03-03 14-25-53.gif">
-          <p><strong>Prototype of a game</strong> — Random Game</p>
+        <div class="project-card">
+          <img src="images/2026-03-03 14-25-53.gif" alt="">
+
+          <strong>Placeholder</strong>
+
+          <div class="project-icons">
+            <span>Unity</span>
+            <span>3D</span>
+          </div>
+
+          <p>Description here</p>
+        </div>
+       
+        <div class="project-card">
+          <img src="images/HSL1.png" alt="">
+
+          <strong>HELL AND STRIFE 2</strong>
+
+          <div class="project-icons">
+            <span>Unity</span>
+            <span>3D</span>
+          </div>
+
+          <p>Description here</p>
         </div>
 
       </div>
     </section>
-
-    <section class="card">
+    <section id="models" class="card">
       <h2>3D Models</h2>
       <div class="flex-row">
         <figure class="card model-figure">
@@ -57,14 +107,12 @@
           </a>
           <figcaption>Outside – RE:CLEAN</figcaption>
         </figure>
-
         <figure class="card model-figure">
           <a href="images/Enemy3.png" class="lightbox">
             <img src="images/Enemy3.png" alt="">
           </a>
           <figcaption>Enemy – RE:CLEAN</figcaption>
         </figure>
-
         <figure class="card model-figure">
           <a href="images/geigercounter.png" class="lightbox">
             <img src="images/geigercounter.png" alt="">
@@ -74,30 +122,28 @@
       </div>
     </section>
 
-    <section class="card">
-      <h2>Planned Projects</h2>
-      <p>No active projects at the moment.</p>
-    </section>
 
-    <section class="card">
+
+    <section id="contact" class="card">
       <h2>Contact</h2>
-
     </section>
-
   </main>
 
-  <footer>
-    <p>© 2025 ghostbusterbob — All Rights Reserved</p>
-  </footer>
-
-
-
+  <!-- Lightbox -->
   <div id="lightbox-overlay">
     <img id="lightbox-img" src="" alt="">
     <span id="lightbox-close">&times;</span>
   </div>
+
+  <script>
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
   <script src="script.js"></script>
 </body>
-
 
 </html>
